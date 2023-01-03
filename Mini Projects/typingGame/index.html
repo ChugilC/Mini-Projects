@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Typing Game</title>
+  </head>
+  <body>
+    <button id="settings-btn" class="settings-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+
+    <button id="how-btn" class="how-btn">
+      <i class="fas fa-question"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <button id="close-btn" class="close-btn">
+          <i class="fas fa-xmark"></i>
+        </button>
+        <div class="content">
+          <h3>How to Play ?</h3>
+          <p>
+            Initially the time is set to 15 seconds, Press the start button and
+            type the word and check how many words you can type
+          </p>
+          <h3>How difficulity works ?</h3>
+          <p>
+            Setting the difficulity changes the time <br />
+            <br />
+            Easy: 5 seconds, Medium: 3 seconds, Hard: 2 seconds
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="settings" class="settings">
+      <form id="settings-form">
+        <div>
+          <label for="difficulity">Difficulity</label>
+          <select id="difficulity">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+      </form>
+      <button id="start">Start</button>
+    </div>
+
+    <div class="container">
+      <h2>Speed Typer</h2>
+      <small>Type the following</small>
+      <h1 id="word"></h1>
+      <input
+        type="text"
+        id="text"
+        autocomplete="off"
+        placeholder="Type the word here..."
+      />
+
+      <p class="time-container">Time left: <span id="time">10s</span></p>
+
+      <p class="score-container">Score: <span id="score">0</span></p>
+
+      <div id="end-game-container" class="end-game-container"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
